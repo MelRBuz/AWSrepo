@@ -19,9 +19,9 @@ func makeCall(client *rpc.Client, message string) {
 }
 
 func main() {
-	server := flag.String("server", "127.0.0.1:8030", "IP:port string to connect to as server")
+	//server := flag.String("server", "127.0.0.1:8030", "IP:port string to connect to as server")
 	flag.Parse()
-	client, _ := rpc.Dial("tcp", *server)
+	client, _ := rpc.Dial("tcp", "98.93.226.193:8080")
 	defer client.Close()
 
 	file, _ := os.Open("wordlist")
